@@ -6,6 +6,7 @@ using UnityEngine;
 public class InitScript : MonoBehaviour {
     public GameObject cell;
     public GameObject virus;
+    public GameObject covid;
 
     void Start() {
         Instantiate(cell, Vector3.zero, Quaternion.identity);
@@ -18,7 +19,11 @@ public class InitScript : MonoBehaviour {
             if(UnityEngine.Random.Range(0, 2) == 1) {
                 Instantiate(cell, clicked, Quaternion.identity);
             } else {
-                Instantiate(virus, clicked, Quaternion.identity);
+                if(UnityEngine.Random.Range(0, 2) == 1) {
+                    Instantiate(virus, clicked, Quaternion.identity);
+                } else {
+                    Instantiate(covid, clicked, Quaternion.identity);
+                }
             }
         }
     }

@@ -18,7 +18,7 @@ public class CellBehaviour : MonoBehaviour
             this.transform.position.x + UnityEngine.Random.Range(-1, 2), 
             this.transform.position.y + UnityEngine.Random.Range(-1, 2)
             );
-            if(this.transform.position.x > 1 && this.transform.position.x < 5 && this.transform.position.y > 1 && this.transform.position.y<3 && UnityEngine.Random.Range(0,3) == 0) {
+            if(this.transform.position.x > 1 && this.transform.position.x < 5 && this.transform.position.y > 1 && this.transform.position.y < 3 && UnityEngine.Random.Range(0,3) == 0) {
                 Instantiate(this, this.transform.position, Quaternion.identity);
                 if(UnityEngine.Random.Range(0,2) == 1) {
                     Destroy(this.gameObject);
