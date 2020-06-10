@@ -1,13 +1,15 @@
-﻿using System;
+﻿using System.Globalization;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CellBehaviour : MonoBehaviour
 {
-    Boolean gameStarted = true;
+    public bool gameStarted;
 
     void Start() {
+        gameStarted = false;
         InvokeRepeating("CustomUpdate", 1.0f, 1.0f);
     }
 
@@ -28,5 +30,8 @@ public class CellBehaviour : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+    }
+    public void setGameStarted(bool val) {
+        this.gameStarted = val;
     }
 }

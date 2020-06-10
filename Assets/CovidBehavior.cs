@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class CovidBehavior : MonoBehaviour
 {
-    Boolean gameStarted = true;
+    public Boolean gameStarted;
     void Start() {
+        gameStarted = false;
         InvokeRepeating("CustomUpdate", 1.0f, 1.0f);
     }
 
